@@ -1,0 +1,67 @@
+// inicializando la variable
+
+float lu = 0; 
+float chin = 10;
+int gif = 1;
+
+float fin = 0;
+float antes = 14;
+int zeta = 1;
+
+
+void setup(){
+  size (500,500);
+}
+;
+
+void draw (){
+   background (0);
+   // requiero de una actualizacion cuando requiero un movimiento continuo
+   // actualizar la variable, esta variable va a cambiar continuamente
+   //lu = lu / 1.1; // aceleracion y desasceleracion
+   lu = lu + (chin*gif);
+   // lu = lu - 1.2;
+   //lu = lu * 1.2;
+   fin = fin + (antes*zeta);
+   // la rapidez depende de la cantidad que le aumente a la variable lu + 1 o 2 o 3 o 4 .....
+   // ***** siempre que quiera algo que rebote, cambie de color, o se devuelva siempre usar tres variables.
+   // imprimir el valor
+   println("lu:"+lu);
+   println("fin:"+fin);
+  
+  if (lu > 480 || lu < 0){
+   //lu = 0;
+   gif = gif * -1; 
+}
+  
+ 
+  if (fin > 480 || fin < 0 ){
+   zeta = zeta * -1;
+ 
+}
+  
+
+  ellipse(fin,lu,40,40);
+  fill(random(250),random(250),random(250));
+  
+}
+
+// antes de pintar cuadrado hacer una condicional.
+ 
+
+
+
+
+
+
+
+// las variables siemore tendr'an dos estados
+//uno de incializacion otro de actualizacion.
+  // x,y
+  //point(250,250);
+  //point(300,450);
+  //line(300,450,0,0);
+  //line(300,450,500,0);
+  //line(300,450,0,500);
+  //line(300,450,500,500);
+  
